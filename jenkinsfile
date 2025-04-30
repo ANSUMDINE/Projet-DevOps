@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Checkout SCM') {
             steps {
-                sh 'https://github.com/ANSUMDINE/Projet-DevOps.git'
+                // Cloner le dépôt avec la commande git correcte
+                sh 'git clone https://github.com/ANSUMDINE/Projet-DevOps.git'
             }
         }
         stage('Build image docker') {
