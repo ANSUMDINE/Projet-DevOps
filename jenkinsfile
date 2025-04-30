@@ -1,12 +1,12 @@
 pipeline {
   agent any
     stages{
-    stage (supprimer le workspace){
+    stage ('supprimer le workspace'){
         steps {
           deleteDir()
         }
     }
-    stage (Checkout SCM){
+    stage ('Checkout SCM'){
         steps {
           sh 'https://github.com/ANSUMDINE/Projet-DevOps.git'
         }
